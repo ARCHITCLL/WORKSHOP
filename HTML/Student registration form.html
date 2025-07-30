@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            Student Registration
+        </title>
+    </head>
+    <body>
+        <h1>Student Registration Form</h1>
+        <form action="registered.html">
+        <table>
+            <tr><th></th><th></th><th></th></tr>
+            <tr><td><label for="name">Full Name: </label></td><td><input type="text" id="name" name="name"/></td><td></td></tr>
+            <tr><td><label for="mail">Email: </label></td><td><input type="email" id="mail" name="mail"/></td><td></td></tr>
+            <tr><td><label for="pass">Password: </label></td><td><input type="password" id="pass" name="pass"/></td><td></td></tr>
+            <tr><td><label for="gender">Gender: </label></td><td>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male"/>
+                </td><td>
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female"></td>
+            </tr>
+            <tr><td>
+                <label for="course">Course: </label>
+            </td>
+            <td>
+                <select>
+                    <option label="Btech" id="course">B.tech</option>
+                    <option label="BCA" id="course">BCA</option>
+                </select>
+            </td><td></td>
+            <tr>
+            <td>
+                <label for="subject">Subject: </label>
+            </td>
+            <td>
+                <select>
+                    <optgroup label="Btech">
+                        <option value="ENG.Math">Engineering Maths</option>
+                        <option value="ENG.Phy">Physics</option>
+                        <option value="TC">Technical Communication</option>
+                    </optgroup>
+                    <optgroup label="BCA">
+                        <option value="BMath">Maths-I</option>
+                        <option value="BDA">DSA</option>
+                        <optio value="Talk">Communication</optio>
+                    </optgroup>
+                </select>
+            </td><td></td></tr>
+            <tr><td></td>
+                <td>
+                    <input type="submit" value="Submit">
+                </td><td>
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
