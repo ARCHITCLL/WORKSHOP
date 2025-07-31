@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subject>
+    <name>
+    DSA
+        <faculty>
+        "M.S Swaminathan","Vivek Singh"
+        </faculty>
+    </name>
+    <name>
+    Maths - 1
+        <facutly>
+        "Aditya Verma","Rajansh Subhash Singh"
+        </facutly>
+    </name>
+    <Workshop>
+        WebDev
+        <faculty>
+        "Harsh Singh","Mohd. Faizan"
+        </faculty>
+    </Workshop>
+    <Endsem>
+        <name>
+        "DSA","Maths - 1","WebDev"
+        </name>
+        <marks>
+        34,52,100
+        </marks>
+    </Endsem>
+</subject>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root h="www.google.com", f="www.facebook.com"
+<h:subject>
+    <h:name>
+    DSA
+        <h:faculty>
+        "M.S Swaminathan","Vivek Singh"
+        </h:faculty>
+    </h:name>
+    <h:name>
+    Maths - 1
+        <h:facutly>
+        "Aditya Verma","Rajansh Subhash Singh"
+        </h:facutly>
+    </h:name>
+</h:subject>
+
+<f:subject>
+    <f:Workshop>
+        WebDev
+        <f:faculty>
+        "Harsh Singh","Faizan"
+        </f:faculty>
+    </f:Workshop>
+    <f:Endsem>
+        <f:name>
+        "DSA","Maths - 1","WebDev"
+        </f:name>
+        <f:marks>
+        34,52,100
+        </f:marks>
+    </f:Endsem>
+</f:subject>

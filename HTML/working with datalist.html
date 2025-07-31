@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        my first webpage
+    </title>
+</head>
+<body>
+    <form action="registered.html">
+        <table>
+            <tr><th></th><th></th></tr>
+            <tr><td><label for="name">Full Name: </label></td><td><input type="text" tabindex="1" id="name" name="name"></td></tr>
+            <tr><td><label for="work">What do you do?: </label></td><td><input type="text" tabindex="2" id="work" name="work"></td></tr>
+            <tr><td><label for="browser">Choose your browser from the list: </label></td>
+                <td><input list="browsers" name="browser" id="browser">
+                <datalist id="browsers">
+                    <option value="Edge"></option>
+                    <option value="Firefox"></option>
+                    <option value="Chrome"></option>
+                    <option value="Opera"></option>
+                    <option value="Safari"></option>
+                </datalist></td></tr>
+            <tr><td><audio controls autoplay muted>
+                <source src="Media/Osho_Mahagita_1_09_24.mp3" type="audio/mpeg" >
+                Your browser does not support the audio element.
+            </audio></td><td>
+                <video controls autoplay muted width="320" height="240">
+                    <source src="Media/Rick Roll (Different link + no ads).mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+            </td></tr>
+        </table>
+    </form>
+</body>
+</html>
