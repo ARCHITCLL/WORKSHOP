@@ -1,0 +1,17 @@
+<!WAP to create a simple website which have more webpages named:
+home,
+registration,
+about us,
+and content.
+content page have the information about the book with their author you have to add respective event on these pages and also the data of registration form should be stored in local vriable and diplayed on about the day.
+>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms</title>
+</head>
+<body>
+    
+</body>
+</html>

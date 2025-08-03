@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                        let a = parseInt(document.getElementById("numinp").value);
+                        let resultText="";
+                        
+                        function primechk(num){
+                            if(num<=1){return false;}
+                            else{
+                                for(let i=2;i<=(num**(0.5));i++){
+                                    if(num%i==0){
+                                        return false;
+                                    }
+                                }
+                            }
+                            return true;
+                        }
+                        if(primechk(a)){
+                            checked = "Prime Number.";
+                        }
+                        else{
+                            checked = "Not Prime Number.";
+                        }
+                    </script>
+        <title>
+            Prime Check
+        </title>
+    </head>
+    <body>
+        <table align="center">
+            <tr><th></th><th></th></tr>
+            <tr>
+                <td><div style="text-align: right;">
+                    <h1>Prime</h1>
+                </div>
+                </td>
+                <td>
+                    <h1>Check</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="numinp"><p><b>Enter Your Number: </b></p></label>
+                </td>
+                <td>
+                    <input type="number" name ="numinp" id="numinp" min="0" max="99999" tabindex="1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="text-align: right;">
+                    <p><b>Your Number is</b></p>
+                    </div>
+                </td>
+                <td>
+                    <textarea name="checked" id="checked" readonly>getElementById(numinp)</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><div style="align-items: right;">
+                    <button onclick="primechk(numinp)" tabindex="2">Check!</button>
+                </div>
+                </td>
+                <td>
+                    <input type="reset" value="Reset" tabindex="3">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

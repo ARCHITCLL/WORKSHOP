@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            User Check
+        </title>
+    </head>
+    <body>
+        <table align="center">
+            <tr><th></th><th></th><th></th></tr>
+            <tr>
+                <td></td>
+                <td>
+                <div style="text-align:center">
+                    <h1><i>User Login</i></h1>
+                </div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="text-align: right;"><p><b>User ID: </b></p></label>
+                </td>
+                <td>
+                    <input type="email" id="User" itemid="User">
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="text-align: right;"><p><b>Password: </b></p></label>
+                </td>
+                <td>
+                    <input type="password" id="psswd" itemid="psswd" style="align-items: right;">
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div style="align-items: right;">
+                        <button on click="
+                        <script>
+                        const user = ["Archit","Vivek","Anadi"];
+                        const password = [["Harsh@1234", "Viveksingh", "help"],["1234", "45654", "23424"],["Aniket", "anant", "lanka"]];
+
+                        let username = document.getElementById("User").value();
+                        let passw = document.getElementById("psswd").value();
+                        let userIndex = user.indexOf(username);
+                        
+                        if (userIndex !== -1) {
+                            if (password[userIndex].includes(passw)) {
+                                alert("Logged in!!!");
+                            }
+                            else{
+                                alert("Wrong username or password!!");
+                            }
+                        }
+                        else{
+                            alert("Wrong username or password!!");
+                        }
+                        </script>
+                        "
+                        >
+                        Login
+                    </button>
+                    </div>
+                </td>
+                <td>
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                <div style="align-items: center;">
+                    <a href="example prime webpage.html">
+                    <p><i>Not a User? Sign up</i></p>
+                    </a>
+                </div>
+            </td>
+            </tr>
+        </table>
+    </body>
+</html>

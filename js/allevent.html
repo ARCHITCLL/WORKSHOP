@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            usign all events
+        </title>
+    </head>
+    <body>
+        <h2>Common HTML EVENTS DEMO</h2>
+
+        <button onclick="alert('button clicked !')">Click Me</button>
+
+        <p onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">
+        Hover your Mouse over this text</p><br>
+
+        <input type="text" onfocus="this.style.background='lightyellow'" placeholder="clicktofocus"><br><br>
+
+        <select onchange="alert('You selected: ' + this.value)">
+            <option>Select option</option>
+            <option>Mango</option>
+            <option>Banana</option>
+            <option>Apple</option>
+        </select><br><br>
+
+        <input type="text" onkeydown="console.log('key pressed: ' + event.key)" placeholder="type something"><br><br>
+
+        <p ondblclick="alert('Texr double-clicked!')">Double-click this text</p>
+    </body>
+</html>

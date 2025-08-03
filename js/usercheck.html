@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            user login
+        </title>
+        <script>
+        let c=["Archit","Vivek","Aditya"];
+        let d=["password","password123","passwordesa"];
+
+        function chck(a,b){
+            if(c.includes(a)){
+                let ui= c.indexOf(a);
+                if( c[ui] === d){
+                    alert("valid user");
+                }
+                else{
+                    alert("wrong id or password");
+                }
+            }
+            else{
+                alert("wrong id or password");
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <script>
+            let g= prompt("Enter ID: ");
+            let f= prompt("Enter Password: ");
+            chck(g,f)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Check</title>
+    <script>
+        function primechk(num) {
+            if (num <= 1) {
+                return false;
+            } else {
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+
+        function checkPrime() {
+            let a = parseInt(document.getElementById("numinp").value);
+            let resultText = "";
+
+            if (isNaN(a)) {
+                resultText = "Please enter a valid number.";
+            } else if (primechk(a)) {
+                resultText = a + " is a Prime Number.";
+            } else {
+                resultText = a + " is Not a Prime Number.";
+            }
+
+            document.getElementById("checked").value = resultText;
+        }
+    </script>
+</head>
+<body>
+    <table align="center">
+        <tr><th></th><th></th></tr>
+        <tr>
+            <td><div style="text-align: right;">
+                <h1>Prime</h1>
+            </div></td>
+            <td><h1>Check</h1></td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="numinp"><p><b>Enter Your Number: </b></p></label>
+            </td>
+            <td>
+                <input type="number" name="numinp" id="numinp" min="0" max="99999" tabindex="1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="text-align: right;">
+                    <p><b>Your Number is</b></p>
+                </div>
+            </td>
+            <td>
+                <textarea name="checked" id="checked" readonly rows="2" cols="30"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="text-align: right;">
+                    <button onclick="checkPrime()" tabindex="2">Check!</button>
+                </div>
+            </td>
+            <td>
+                <input type="reset" value="Reset" tabindex="3" onclick="document.getElementById('checked').value='';">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
