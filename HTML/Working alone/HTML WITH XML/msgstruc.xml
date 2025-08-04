@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTD-8"?>
+<note>
+<to>Archit</to>
+<from>Vivek</from>
+<heading> Heading Part of the Message.</heading>
+<message>
+This is the part we add our original message htat you think should be there in the message display area of the webpage this will contain the actual message that people have sent.
+</message>
+</note>

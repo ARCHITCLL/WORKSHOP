@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            XML IN HTML
+        </title>
+    </head>
+    <body>
+        
+        <div>
+        <b>To: <span id="to"></span></b> <br>
+        <b>From: <span id="from"></span></b> <br>
+        <b>Heading: <span id="heading"></span></b> <br>
+        <b>Message: <span id="message"></span></b> <br>
+        </div>
+
+        <script>
+
+            let xmlhttp;
+            let xmlDoc;
+
+            if(window.XMLHttpRequest){
+                xmlhttp = new XMLHttpRequest();
+            }
+            else{
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlhttp.open("GET","msgstruc.xml",false);
+            xmlhttp.send();
+
+            xmlDoc = xmlhttp.responseXML;
+            if(xmlDoc){
+            document.getElementById("to").innerHTML= xmlDoc.geElementsByTagName("to")[0].childNodes[0].nodeValue;
+            document.getElementById("from").innerHTML= xmlDoc.geElementsByTagName("from")[0].childNodes[0].nodeValue;
+            document.getElementById("heading").innerHTML=xmlDoc.geElementsByTagName("heading")[0].childNodes[0].nodeValue;
+            document.getElementById("message").innerHTML= xmlDoc.geElementsByTagName("message")[0].childNodes[0].nodeValue;}
+            else{
+                alert("Could not load XML file");
+            }
+        </script>
+    </body>
+</html>
