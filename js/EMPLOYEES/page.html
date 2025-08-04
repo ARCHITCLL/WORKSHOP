@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Manage
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    Employee Management System
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="page.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="addEmployee()">
+                            Add Employee
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Remove Employee
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="showAll()">
+                            Show Data
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="showLeft()">
+                            Employees Left
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="">
+                        About Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div><br>
+            <h2>Employee Details</h2>
+        </div>
+        <table id="empTable">
+            <thead>
+            <tr>
+                <th>Name
+                </th>
+                <th>
+                    Joining Date
+                </th>
+                <th>
+                    Salary
+                </th>
+                <th>
+                    Leaving Date
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <script>
+        const employee=[
+            {name:"Archit",joining:"05-01-2012",Salary:20000,TDate:null},
+            {name:"Anand",joining:"05-11-2022",Salary:40000,TDate:null},
+            {name:"Vivek",joining:"23-03-2012",Salary:76000,TDate:null},
+            {name:"Harshit",joining:"05-01-2012",Salary:20000,TDate:null},
+            {name:"Abhishek",joining:"05-01-2012",Salary:20000,TDate:null},
+            {name:"Help",joining:"05-01-2012",Salary:20000,TDate:"15-01-2020"},
+            {name:"IWANTtotakeREST",joining:"05-01-2012",Salary:20000,TDate:"05-04-2012"},
+            {name:"Ninth",joining:"05-01-2012",Salary:20000,TDate:"09-09-2019"},
+            {name:"WhyrVstilworkin",joining:"05-01-2012",Salary:20000,TDate:null}
+        ];
+        const tbody= document.querySelector("#empTable tbody");
+        
+        function displayEmployees(empList) {
+            tbody.innerHTML = "";
+            empList.forEach(emp => {
+                let row = `
+                <tr>
+                    <td>${emp.name}</td>
+                    <td>${emp.joining}</td>
+                    <td>${emp.Salary}</td>
+                    <td>${emp.TDate ? emp.TDate : "Still Working"}</td>
+                    </tr>`;
+                    tbody.innerHTML += row;
+                });
+            }
+        function showAll(){
+            displayEmployees(employee);
+        }
+        
+        function showLeft(){
+            const leftEmployees = employee.filter(emp => emp.TDate !== null);
+            displayEmployees(leftEmployees);
+        }
+        
+        function addEmployee(empList) {
+            const newRow = document.createElement("tr");
+            
+            newRow.innerHTML =
+            `
+            <td><input type="text" placeholder="Name"></td>
+            <td><input type="date"></td>
+            <td><input type="number" placeholder="Salary"></td>
+            <td><input type="date" onkeydown="saveRow(event, this)"></td>
+            `;
+            tbody.appendChild(newRow);
+
+            Event=KeyboardEvent("Enter");
+        }
+        
+        showAll();
+        
+        </script>
+        <span style="justify-items: auto;">
+            <div style="display: flex;">
+                <div style="left: auto;" class="nav-links">
+                    <a href="#" id="submit" onclick="addEmployee()">
+                        Add Data
+                    </a>
+                </div>
+            </div>
+        </span>
+        <span i>
+            <div style="display: right;">
+                <a href="#" onclick="showAll()" style="align-items: right;">Submit</a>
+            </div>
+            </span>
+    </body>
+        
+        </html>
