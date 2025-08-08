@@ -1,0 +1,94 @@
+<!--
+WAP to create an html form where 4 user enter their name and age you have to arrange the age according to the ascending order or to the next page
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div style="display:grid;grid-auto-flow: row;">
+        <form action="#">
+            <div style="display:grid;grid-auto-flow: column;">
+                <div style="display:grid;grid-auto-flow: row;">
+                    <p><b>User 1: </p></b><br>
+                    <label for="name1"><p>Name: </p></label>
+                    <label for="age1"><p>Age: </p></label><br>
+
+                    <p><b>User 2: </p></b><br>
+                    <label for="name2"><p>Name: </p></label>
+                    <label for="age2"><p>Age: </p></label><br>
+
+                    <p><b>User 3:</p></b><br>
+                    <label for="name3"><p>Name: </p></label>
+                    <label for="age3"><p>Age: </p></label><br>
+
+                    <p><b>User 4:</p></b><br>
+                    <label for="name4"><p>Name: </p></label>
+                    <label for="age4"><p>Age: </p></label><br>
+                </div>
+                <div style="display:grid; grid:grid-auto-flow:row">
+                    <br>
+                    <input type="text" id="name1" name="name1">
+                    <input type="number" id="age1" name="age1">
+                    <br>
+                    <br>
+                    <input type="text" id="name2" name="name2">
+                    <input type="number" id="age2" name="age2">
+                    <br>
+                    <br>
+                    <input type="text" id="name3" name="name3">
+                    <input type="number" id="age3" name="age3">
+                    <br>
+                    <br>
+                    <input type="text" id="name4" name="name4">
+                    <input type="number" id="age4" name="age4">
+                    <br>
+                    <button type=button onclick="Submit(event);" onmouseleave="this.style.color='red'" onmouseenter="this.color='red'">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div id="result" class="user-data">
+            
+        </div>
+    </div>
+
+    <script>
+        function Submit(event){
+            event.preventDefault();
+
+            let users=[
+                {
+                    name: document.getElementById('name1').value,
+                    age: parseInt(document.getElementById('age1').value)
+                },
+                {
+                    name: document.getElementById('name2').value,
+                    age: parseInt(document.getElementById('age2').value)
+                },
+                {
+                    name: document.getElementById('name3').value,
+                    age: parseInt(document.getElementById('age3').value)
+                },
+                {
+                    name: document.getElementById('name4').value,
+                    age: parseInt(document.getElementById('age4').value)
+                }
+            ];
+        
+            users.sort((a,b) => a.age - b.age);
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML='';
+
+            users.forEach(user => {
+                const userDiv = document.createElement('div');
+                userDiv.classList.add('user-item');
+                userDiv.textContent = `Name: ${user.name},Age: ${user.age}`;
+                resultDiv.appendChild(userDiv);
+            });
+        }
+    </script>
+    
+</body>
+</html>
